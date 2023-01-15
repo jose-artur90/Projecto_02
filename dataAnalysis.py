@@ -22,6 +22,7 @@ df.drop_duplicates(inplace= False)
 df.drop('company',axis=1, inplace = True)
 
 print(df)
+print(df.shape[0])
 
 ##
 import missingno as msno
@@ -164,29 +165,29 @@ num_df['agent'] = np.log(num_df['agent'] + 1)
 num_df['adr'] = np.log(num_df['adr'] + 1)
 
 
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import RandomForestClassifier
+# from sklearn.model_selection import train_test_split, GridSearchCV
+# from sklearn.preprocessing import StandardScaler
+# from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+# from sklearn.linear_model import LogisticRegression
+# from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.svm import SVC
+# from sklearn.tree import DecisionTreeClassifier
+# from sklearn.ensemble import RandomForestClassifier
+# from sklearn.ensemble import RandomForestClassifier
 
-#X = pd.<a onclick="parent.postMessage({'referent':'.pandas.concat'}, '*')">concat([cat_df, num_df], axis = 1)
-X = pd.concat([cat_df, num_df], axis = 1)
-y = df['is_canceled']
+# #X = pd.<a onclick="parent.postMessage({'referent':'.pandas.concat'}, '*')">concat([cat_df, num_df], axis = 1)
+# X = pd.concat([cat_df, num_df], axis = 1)
+# y = df['is_canceled']
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.30)
-svc = SVC(random_state=42)
-svc.fit(X_train, y_train)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.30)
+# svc = SVC(random_state=42)
+# svc.fit(X_train, y_train)
 
-print(df)
-print(X_train)
+# print(df)
+# print(X_train)
 
-dtree = DecisionTreeClassifier()
-dtree = dtree.fit(X, y)
+# dtree = DecisionTreeClassifier()
+# dtree = dtree.fit(X, y)
 
 

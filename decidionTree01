@@ -1,7 +1,5 @@
 import sys
 import matplotlib
-matplotlib.use('Agg')
-
 import pandas
 from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
@@ -56,7 +54,7 @@ y[np.isnan(y)] = -1
 dtree = DecisionTreeClassifier()
 dtree = dtree.fit(X, y)
 
-tree.plot_tree(dtree, feature_names=features)
+# tree.plot_tree(dtree, feature_names=features)
 
 # Para guardar a árvore de decisão como Imagem
 fig = plt.figure(figsize=(25,20))
