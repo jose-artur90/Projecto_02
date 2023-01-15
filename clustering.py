@@ -16,7 +16,6 @@ plt.show()
 plt.savefig(sys.stdout.buffer)
 sys.stdout.flush()   
 
-
 ###
 
 data = list(zip(x, y))
